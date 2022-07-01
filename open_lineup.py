@@ -13,7 +13,7 @@ import os
 def get_links(file):
     links = []
     for line in file:
-        if line.startswith("https://www.youtube.com/"):
+        if line.startswith("https://"):
             lnk = line.replace('\n', '') # Strip \n from link
             print('Link found: ', lnk)
             links.append(lnk)
