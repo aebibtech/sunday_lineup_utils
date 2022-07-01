@@ -1,3 +1,5 @@
+@echo off
+
 echo Creating a new virtual environment for Sunday Line-up Utils...
 python -m venv .\venv
 
