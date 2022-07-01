@@ -44,7 +44,12 @@ tid = config[2]
 
 sess_file = '~/fbsession.json'
 
-lineup_date = sys.argv[1]
+try:
+    lineup_date = sys.argv[1]
+except:
+    lineup_date = input('Line-up date (yyyy-mm-dd): ')
+
+
 print("Line-up date: ", lineup_date, "\n")
 
 greeting = "Hi Team! This is our line up for this Sunday:\n\n\n"
