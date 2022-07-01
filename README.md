@@ -6,8 +6,10 @@ This repo contains Python 3 scripts for my Sunday needs. Works on Windows system
 - Opens up song links from text files that contain links for studying songs.
 - Sends text files to team members on Facebook Group Chat.
 
-## How to use
-1. Run install-requirements.cmd
+# How to use
+
+## First run
+Run `install-requirements.cmd`
 
 ## Sending Line-ups
 1. Create a line-up file containing links
