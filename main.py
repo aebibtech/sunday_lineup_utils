@@ -2,9 +2,10 @@ import sys
 from open_lineup import *
 
 lineup_date = ''
-if sys.argv[1]:
+
+try:
     lineup_date = sys.argv[1]
-else:
+except:
     lineup_date = input('Line-up Date (yyyy-mm-dd): ')
 
 fhand = open_file(lineup_date)
