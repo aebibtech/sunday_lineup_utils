@@ -68,7 +68,18 @@ except:
     pass
 
 # Attempt a login with the session, and if it fails, just use the email & password
-client = Client(email, pswd, max_tries=2, session_cookies=cookies)
+try:
+    client = Client(email, pswd, max_tries=2, session_cookies=cookies)
+except:
+    pswd = input(getpass())
+    client = Client(email, pswd, max_tries=2, session_cookies=cookies)
+    if client.isLoggedIn():
+        fhand = open(os.path.expanduser("~/.fbconfig"),"w")
+        fhand.write(email + '\n')
+        fhand.write(pswd + '\n')
+        fhand.write(tid)
+        fhand.close()
+
 
 # ... If logged in, send Line up message to GC.
 sent = False

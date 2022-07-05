@@ -20,18 +20,6 @@ def get_links(file):
     return links
 
 
-# This function opens Google Chrome with the Link Specified.
-# win_type - "w" for New Window, "t" for New Tab
-def chrome(link = "https://www.google.com", win_type = "w"):
-    gc_path = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
-    wtype = None
-    if win_type == 'w':
-        wtype = '--new-window'
-    elif win_type == 't':
-        wtype = '--new-tab'
-    os.system("\"{}\" {} {}".format(gc_path, wtype, link))
-
-
 # This function opens a lineup file in read mode and returns a file handle
 def open_file(lineup_date):
     lineups = os.path.expanduser("~/Documents/Lineup Files")
